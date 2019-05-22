@@ -1,0 +1,51 @@
+Schema for btredb database
+
+### Listing
+id: INT
+realter: INT (FOREGIN KEY [realter])
+title: STR
+address: STR
+street: STR
+city: STR
+state: STR 
+zipcode: STR 
+bedrooms: INT 
+bathrooms: INT 
+garage: INT [0]
+sqft: INT 
+lot_size: FLOAT 
+is_published: BOOL [true]
+list_date: DATE
+description: TEXT
+main_photo: STR
+photo_1: STR
+photo_2: STR
+photo_3: STR
+photo_4: STR
+photo_5: STR
+photo_6: STR
+
+
+### Realter
+id: INT
+name: STR
+email: STR 
+contact: STR 
+photo: STR
+description: TEXT
+is_mvp: BOOL [False]
+hire_date: Date
+
+### Contact 
+id: INT 
+user_id: INT
+listing_id: INT
+listing: INT (FOREGIN KEY [listing])
+name: STR 
+email: STR 
+phone: STR
+contact: STR 
+message: TEXT 
+contact_date: Date
+
+
